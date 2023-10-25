@@ -1,0 +1,51 @@
+1.Customer Login
+
+http://localhost:63650/api/Customer/Login
+
+2.Customer Registration
+
+http://localhost:63650/api/Customer/Registration
+
+
+1.Garage Registration
+
+http://localhost:63650/api/Garage/registration 
+
+2.Garage Login
+
+http://localhost:63650/api/Garage/login
+
+
+3.Get All Car Varients 
+
+http://localhost:63650/api/Service/GetAllVarient
+
+4.Get All Car Categorys
+
+http://localhost:63650/api/Service/GetCarCategory
+
+5.Get Order
+
+http://localhost:63650/api/Order/GetOrderDetail/1
+
+
+6.Edit OrderDetail
+
+http://localhost:63650/api/Order/EditOrder/1
+
+7. Get All Car Brands
+
+http://localhost:63650/api/Service/GetCarBrands
+
+8.Get perticular Car Model By BrandId 
+
+http://localhost:63650/api/Service/GetAllCarModel/1
+
+9. Get A Specific CarModel With Specific Varient and its All Service price basis of BrandId  and VarientId
+
+http://localhost:63650/api/Service/GetCarModel/1/2
+
+10. get Reviced Order by Garage with the help of GarageId
+
+http://localhost:63650/api/RequestHandler/Detail/1
+

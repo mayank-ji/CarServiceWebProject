@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="96db328880cb4c10a799fa9fab64da58" Name="Diagram1">
+        <EntityTypeShape EntityType="CarDispensaryModel.Brand" Width="1.5" PointX="3.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.CarModel" Width="1.5" PointX="3.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.Category" Width="1.5" PointX="3.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.Customer" Width="1.5" PointX="8.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.ExteriorImage" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.GarageDetail" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.InteriorImage" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.InventoryDetail" Width="1.5" PointX="8" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.item" Width="1.5" PointX="8.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.OrderDetail" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.RateChart" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.Service" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.Table" Width="1.5" PointX="10.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarDispensaryModel.Varient" Width="1.5" PointX="3.75" PointY="17.5" IsExpanded="true" />
+        <AssociationConnector Association="CarDispensaryModel.FK__RateChart__Brand__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__RateChart__Model__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__RateChart__Categ__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__InventoryD__ExId__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__InventoryD__InId__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__OrderDeta__Servi__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__RateChart__Servi__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="CarDispensaryModel.FK__RateChart__Varie__300424B4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

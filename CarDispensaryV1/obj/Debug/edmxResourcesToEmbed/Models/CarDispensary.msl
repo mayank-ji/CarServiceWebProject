@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarDispensaryModelStoreContainer" CdmEntityContainer="CarDispensaryEntities">
+    <EntitySetMapping Name="Brands">
+      <EntityTypeMapping TypeName="CarDispensaryModel.Brand">
+        <MappingFragment StoreEntitySet="Brand">
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="BrandName" ColumnName="BrandName" />
+          <ScalarProperty Name="BrandImage" ColumnName="BrandImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CarModels">
+      <EntityTypeMapping TypeName="CarDispensaryModel.CarModel">
+        <MappingFragment StoreEntitySet="CarModel">
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="ModelName" ColumnName="ModelName" />
+          <ScalarProperty Name="ModelImage" ColumnName="ModelImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categories">
+      <EntityTypeMapping TypeName="CarDispensaryModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CateName" ColumnName="CateName" />
+          <ScalarProperty Name="CatImage" ColumnName="CatImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="CarDispensaryModel.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CustName" ColumnName="CustName" />
+          <ScalarProperty Name="CustEmail" ColumnName="CustEmail" />
+          <ScalarProperty Name="CustMobile" ColumnName="CustMobile" />
+          <ScalarProperty Name="CustAddress" ColumnName="CustAddress" />
+          <ScalarProperty Name="CustPassword" ColumnName="CustPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExteriorImages">
+      <EntityTypeMapping TypeName="CarDispensaryModel.ExteriorImage">
+        <MappingFragment StoreEntitySet="ExteriorImages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Front" ColumnName="Front" />
+          <ScalarProperty Name="Rear" ColumnName="Rear" />
+          <ScalarProperty Name="Left" ColumnName="Left" />
+          <ScalarProperty Name="Right" ColumnName="Right" />
+          <ScalarProperty Name="Oid" ColumnName="Oid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GarageDetails">
+      <EntityTypeMapping TypeName="CarDispensaryModel.GarageDetail">
+        <MappingFragment StoreEntitySet="GarageDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="GarageName" ColumnName="GarageName" />
+          <ScalarProperty Name="GarageMobile" ColumnName="GarageMobile" />
+          <ScalarProperty Name="GarageLocation" ColumnName="GarageLocation" />
+          <ScalarProperty Name="License" ColumnName="License" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InteriorImages">
+      <EntityTypeMapping TypeName="CarDispensaryModel.InteriorImage">
+        <MappingFragment StoreEntitySet="InteriorImages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Front" ColumnName="Front" />
+          <ScalarProperty Name="Rear" ColumnName="Rear" />
+          <ScalarProperty Name="Boot" ColumnName="Boot" />
+          <ScalarProperty Name="Bonet" ColumnName="Bonet" />
+          <ScalarProperty Name="OId" ColumnName="OId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InventoryDetails">
+      <EntityTypeMapping TypeName="CarDispensaryModel.InventoryDetail">
+        <MappingFragment StoreEntitySet="InventoryDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="Mudflaps" ColumnName="Mudflaps" />
+          <ScalarProperty Name="WheelCaps" ColumnName="WheelCaps" />
+          <ScalarProperty Name="Floormates" ColumnName="Floormates" />
+          <ScalarProperty Name="Idol" ColumnName="Idol" />
+          <ScalarProperty Name="Battery" ColumnName="Battery" />
+          <ScalarProperty Name="Documents" ColumnName="Documents" />
+          <ScalarProperty Name="FuelMeterRange" ColumnName="FuelMeterRange" />
+          <ScalarProperty Name="OtherRemark" ColumnName="OtherRemark" />
+          <ScalarProperty Name="ExId" ColumnName="ExId" />
+          <ScalarProperty Name="InId" ColumnName="InId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="items">
+      <EntityTypeMapping TypeName="CarDispensaryModel.item">
+        <MappingFragment StoreEntitySet="items">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="part" ColumnName="part" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="qty" ColumnName="qty" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetails">
+      <EntityTypeMapping TypeName="CarDispensaryModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="CarRegistrationNo" ColumnName="CarRegistrationNo" />
+          <ScalarProperty Name="ManufacturingYear" ColumnName="ManufacturingYear" />
+          <ScalarProperty Name="OdometerReading" ColumnName="OdometerReading" />
+          <ScalarProperty Name="VehicleModel" ColumnName="VehicleModel" />
+          <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+          <ScalarProperty Name="CustMobileNo" ColumnName="CustMobileNo" />
+          <ScalarProperty Name="CustEmail" ColumnName="CustEmail" />
+          <ScalarProperty Name="CustAddress" ColumnName="CustAddress" />
+          <ScalarProperty Name="VisitMode" ColumnName="VisitMode" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="GarageName" ColumnName="GarageName" />
+          <ScalarProperty Name="ServicePrice" ColumnName="ServicePrice" />
+          <ScalarProperty Name="VarientName" ColumnName="VarientName" />
+          <ScalarProperty Name="ServiceDone" ColumnName="ServiceDone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RateCharts">
+      <EntityTypeMapping TypeName="CarDispensaryModel.RateChart">
+        <MappingFragment StoreEntitySet="RateChart">
+          <ScalarProperty Name="PriceId" ColumnName="PriceId" />
+          <ScalarProperty Name="BrandId" ColumnName="BrandId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="VarientId" ColumnName="VarientId" />
+          <ScalarProperty Name="ModelId" ColumnName="ModelId" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="CarDispensaryModel.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="CarDispensaryModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="orderId" ColumnName="orderId" />
+          <ScalarProperty Name="Part" ColumnName="Part" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Varients">
+      <EntityTypeMapping TypeName="CarDispensaryModel.Varient">
+        <MappingFragment StoreEntitySet="Varient">
+          <ScalarProperty Name="VarientId" ColumnName="VarientId" />
+          <ScalarProperty Name="VarName" ColumnName="VarName" />
+          <ScalarProperty Name="VarImage" ColumnName="VarImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDispensary", "CarDispensary.csproj", "{C9F7E12C-0DC1-41BE-93D2-168DEFDF8469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarDispensaryV1", "..\CarDispensaryV1\CarDispensaryV1.csproj", "{610DD4E9-3326-49AC-BD50-DA9D7BA812CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9F7E12C-0DC1-41BE-93D2-168DEFDF8469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9F7E12C-0DC1-41BE-93D2-168DEFDF8469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9F7E12C-0DC1-41BE-93D2-168DEFDF8469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9F7E12C-0DC1-41BE-93D2-168DEFDF8469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610DD4E9-3326-49AC-BD50-DA9D7BA812CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610DD4E9-3326-49AC-BD50-DA9D7BA812CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610DD4E9-3326-49AC-BD50-DA9D7BA812CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610DD4E9-3326-49AC-BD50-DA9D7BA812CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC7AE560-9CDB-4417-B11C-113DB98FFDCF}
+	EndGlobalSection
+EndGlobal

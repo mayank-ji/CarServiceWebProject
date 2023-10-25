@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CarDispensaryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brand">
+    <Key>
+      <PropertyRef Name="BrandId" />
+    </Key>
+    <Property Name="BrandId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BrandImage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RateCharts" Relationship="Self.FK__RateChart__Brand__2E1BDC42" FromRole="Brand" ToRole="RateChart" />
+  </EntityType>
+  <EntityType Name="CarModel">
+    <Key>
+      <PropertyRef Name="ModelId" />
+    </Key>
+    <Property Name="ModelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ModelName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModelImage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RateCharts" Relationship="Self.FK__RateChart__Model__31EC6D26" FromRole="CarModel" ToRole="RateChart" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CateName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CatImage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RateCharts" Relationship="Self.FK__RateChart__Categ__2F10007B" FromRole="Category" ToRole="RateChart" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustMobile" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CustPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExteriorImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Front" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Left" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Right" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Oid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="InventoryDetails" Relationship="Self.FK__InventoryD__ExId__6383C8BA" FromRole="ExteriorImages" ToRole="InventoryDetails" />
+  </EntityType>
+  <EntityType Name="GarageDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GarageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GarageMobile" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GarageLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="License" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InteriorImage">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Front" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Rear" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Boot" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Bonet" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="OId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="InventoryDetails" Relationship="Self.FK__InventoryD__InId__656C112C" FromRole="InteriorImages" ToRole="InventoryDetails" />
+  </EntityType>
+  <EntityType Name="InventoryDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderId" Type="Int32" Nullable="false" />
+    <Property Name="Mudflaps" Type="Int32" />
+    <Property Name="WheelCaps" Type="Int32" />
+    <Property Name="Floormates" Type="Int32" />
+    <Property Name="Idol" Type="Int32" />
+    <Property Name="Battery" Type="Int32" />
+    <Property Name="Documents" Type="Int32" />
+    <Property Name="FuelMeterRange" Type="Int32" />
+    <Property Name="OtherRemark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ExId" Type="Int32" />
+    <Property Name="InId" Type="Int32" />
+    <NavigationProperty Name="ExteriorImage" Relationship="Self.FK__InventoryD__ExId__6383C8BA" FromRole="InventoryDetails" ToRole="ExteriorImages" />
+    <NavigationProperty Name="InteriorImage" Relationship="Self.FK__InventoryD__InId__656C112C" FromRole="InventoryDetails" ToRole="InteriorImages" />
+  </EntityType>
+  <EntityType Name="item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderId" Type="Int32" />
+    <Property Name="part" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="qty" Type="Int32" />
+    <Property Name="amount" Type="Double" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarRegistrationNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ManufacturingYear" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OdometerReading" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VehicleModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustMobileNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CustEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CustAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VisitMode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceId" Type="Int32" />
+    <Property Name="GarageName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServicePrice" Type="Double" />
+    <Property Name="VarientName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServiceDone" Type="Boolean" />
+    <NavigationProperty Name="Service" Relationship="Self.FK__OrderDeta__Servi__3F466844" FromRole="OrderDetail" ToRole="Service" />
+  </EntityType>
+  <EntityType Name="RateChart">
+    <Key>
+      <PropertyRef Name="BrandId" />
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="ServiceId" />
+      <PropertyRef Name="VarientId" />
+      <PropertyRef Name="ModelId" />
+    </Key>
+    <Property Name="PriceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BrandId" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <Property Name="VarientId" Type="Int32" Nullable="false" />
+    <Property Name="ModelId" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Brand" Relationship="Self.FK__RateChart__Brand__2E1BDC42" FromRole="RateChart" ToRole="Brand" />
+    <NavigationProperty Name="CarModel" Relationship="Self.FK__RateChart__Model__31EC6D26" FromRole="RateChart" ToRole="CarModel" />
+    <NavigationProperty Name="Category" Relationship="Self.FK__RateChart__Categ__2F10007B" FromRole="RateChart" ToRole="Category" />
+    <NavigationProperty Name="Service" Relationship="Self.FK__RateChart__Servi__30F848ED" FromRole="RateChart" ToRole="Service" />
+    <NavigationProperty Name="Varient" Relationship="Self.FK__RateChart__Varie__300424B4" FromRole="RateChart" ToRole="Varient" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Servi__3F466844" FromRole="Service" ToRole="OrderDetail" />
+    <NavigationProperty Name="RateCharts" Relationship="Self.FK__RateChart__Servi__30F848ED" FromRole="Service" ToRole="RateChart" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="orderId" Type="Int32" />
+    <Property Name="Part" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Double" />
+  </EntityType>
+  <EntityType Name="Varient">
+    <Key>
+      <PropertyRef Name="VarientId" />
+    </Key>
+    <Property Name="VarientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VarName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="VarImage" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="RateCharts" Relationship="Self.FK__RateChart__Varie__300424B4" FromRole="Varient" ToRole="RateChart" />
+  </EntityType>
+  <Association Name="FK__RateChart__Brand__2E1BDC42">
+    <End Role="Brand" Type="Self.Brand" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RateChart" Type="Self.RateChart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brand">
+        <PropertyRef Name="BrandId" />
+      </Principal>
+      <Dependent Role="RateChart">
+        <PropertyRef Name="BrandId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RateChart__Model__31EC6D26">
+    <End Role="CarModel" Type="Self.CarModel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RateChart" Type="Self.RateChart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CarModel">
+        <PropertyRef Name="ModelId" />
+      </Principal>
+      <Dependent Role="RateChart">
+        <PropertyRef Name="ModelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RateChart__Categ__2F10007B">
+    <End Role="Category" Type="Self.Category" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RateChart" Type="Self.RateChart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="RateChart">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InventoryD__ExId__6383C8BA">
+    <End Role="ExteriorImages" Type="Self.ExteriorImage" Multiplicity="0..1" />
+    <End Role="InventoryDetails" Type="Self.InventoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ExteriorImages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InventoryDetails">
+        <PropertyRef Name="ExId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__InventoryD__InId__656C112C">
+    <End Role="InteriorImages" Type="Self.InteriorImage" Multiplicity="0..1" />
+    <End Role="InventoryDetails" Type="Self.InventoryDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InteriorImages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="InventoryDetails">
+        <PropertyRef Name="InId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Servi__3F466844">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RateChart__Servi__30F848ED">
+    <End Role="Service" Type="Self.Service" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RateChart" Type="Self.RateChart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="RateChart">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__RateChart__Varie__300424B4">
+    <End Role="Varient" Type="Self.Varient" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RateChart" Type="Self.RateChart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Varient">
+        <PropertyRef Name="VarientId" />
+      </Principal>
+      <Dependent Role="RateChart">
+        <PropertyRef Name="VarientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CarDispensaryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brands" EntityType="Self.Brand" />
+    <EntitySet Name="CarModels" EntityType="Self.CarModel" />
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="ExteriorImages" EntityType="Self.ExteriorImage" />
+    <EntitySet Name="GarageDetails" EntityType="Self.GarageDetail" />
+    <EntitySet Name="InteriorImages" EntityType="Self.InteriorImage" />
+    <EntitySet Name="InventoryDetails" EntityType="Self.InventoryDetail" />
+    <EntitySet Name="items" EntityType="Self.item" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
+    <EntitySet Name="RateCharts" EntityType="Self.RateChart" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="Tables" EntityType="Self.Table" />
+    <EntitySet Name="Varients" EntityType="Self.Varient" />
+    <AssociationSet Name="FK__RateChart__Brand__2E1BDC42" Association="Self.FK__RateChart__Brand__2E1BDC42">
+      <End Role="Brand" EntitySet="Brands" />
+      <End Role="RateChart" EntitySet="RateCharts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RateChart__Model__31EC6D26" Association="Self.FK__RateChart__Model__31EC6D26">
+      <End Role="CarModel" EntitySet="CarModels" />
+      <End Role="RateChart" EntitySet="RateCharts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RateChart__Categ__2F10007B" Association="Self.FK__RateChart__Categ__2F10007B">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="RateChart" EntitySet="RateCharts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InventoryD__ExId__6383C8BA" Association="Self.FK__InventoryD__ExId__6383C8BA">
+      <End Role="ExteriorImages" EntitySet="ExteriorImages" />
+      <End Role="InventoryDetails" EntitySet="InventoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__InventoryD__InId__656C112C" Association="Self.FK__InventoryD__InId__656C112C">
+      <End Role="InteriorImages" EntitySet="InteriorImages" />
+      <End Role="InventoryDetails" EntitySet="InventoryDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Servi__3F466844" Association="Self.FK__OrderDeta__Servi__3F466844">
+      <End Role="Service" EntitySet="Services" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RateChart__Servi__30F848ED" Association="Self.FK__RateChart__Servi__30F848ED">
+      <End Role="Service" EntitySet="Services" />
+      <End Role="RateChart" EntitySet="RateCharts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__RateChart__Varie__300424B4" Association="Self.FK__RateChart__Varie__300424B4">
+      <End Role="Varient" EntitySet="Varients" />
+      <End Role="RateChart" EntitySet="RateCharts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

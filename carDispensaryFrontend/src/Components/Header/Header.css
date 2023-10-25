@@ -1,0 +1,90 @@
+.head {
+  position: sticky;
+  top: 0;
+}
+
+.header_top {
+  height: 10%; 
+  background: white;
+  color: #000d6b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1vw; 
+  border: 2px solid black;
+  flex-wrap: wrap;
+}
+
+.header__location {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__location-content h4 {
+  font-weight: 700;
+  color: #000d6b;
+  font-size: 1vw; 
+}
+.header__location-content h6 {
+  font-weight: 600;
+}
+
+.header__lower {
+  height: 10%; 
+  background: #000d6b;
+  display: flex;
+font-size: 1vw;
+  align-items: center;
+  color: #fff;
+}
+
+
+.header__lower__divfirst
+{
+  display: flex;
+  width: 50%;
+  padding-left: 1vw; 
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+
+.header__lower__divsecond {
+  display: flex;
+  width: 50%;
+  padding-left: 0.5vw; 
+  /* justify-content: space-between; */
+  justify-content: end;
+  padding-right: 0.5vw;
+  align-items: center;
+}
+
+.Link {
+  text-decoration: none;
+  color: white;
+}
+
+.link
+{
+text-decoration: none;
+  color:black 
+}
+
+
+.Link:hover {
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header_top {
+    font-size: 3.5vw;
+  }
+
+  .header__location-content h4,
+  .header__location-content h6 {
+    font-size: 3.5vw;
+  }
+}
+
+
